@@ -958,9 +958,12 @@ button.btn {
     position: absolute;
     inset: 0;
     z-index: -2;
-    background:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
-        var(--hero-image, url('../images/hero-home.jpg')) center / cover no-repeat;
+        var(--hero-image, url('../images/hero-home.jpg'));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transform: scale(1.02);
 }
 

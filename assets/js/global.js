@@ -742,10 +742,13 @@
 
     const setHeroImages = () => {
         qsa('[data-hero-image]').forEach((hero) => {
-            const image = hero.getAttribute('data-hero-image');
-            if (image) {
-                hero.style.setProperty('--hero-image', `url("${image}")`);
-            }
+            const imagePath = hero.getAttribute('data-hero-image');
+
+            if (!imagePath) return;
+
+            const imageUrl = new URL(imagePath, window.location.href).href;
+
+            hero.style.setProperty('--hero-image', `url("${imageUrl}")`);
         });
     };
 
