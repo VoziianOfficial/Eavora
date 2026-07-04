@@ -260,30 +260,6 @@
         setControl(0);
     };
 
-    const setupFactorsAccordion = () => {
-        const items = qsa('.about-factors__item');
-
-        if (!items.length) return;
-
-        items.forEach((item) => {
-            const button = qs('[data-about-factor]', item);
-
-            if (!button) return;
-
-            button.addEventListener('click', () => {
-                const isOpen = item.classList.contains('is-open');
-
-                items.forEach((otherItem) => {
-                    otherItem.classList.remove('is-open');
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                }
-            });
-        });
-    };
-
     const setupTrustDetails = () => {
         const detailsItems = qsa('.about-trust__note');
 
@@ -301,7 +277,6 @@
         setupModelCards();
         setupCategoryPanel();
         setupControlCards();
-        setupFactorsAccordion();
         setupTrustDetails();
     };
 
