@@ -103,6 +103,114 @@
             </div>
         </section>
 
+                <!-- SECTION 4: MAIN REQUEST FORM -->
+                <section class="section section-white contact-main" id="request-form" aria-labelledby="request-form-title">
+                    <div class="container-wide">
+                        <div class="contact-main__layout">
+                            <div class="contact-main__content" data-aos="fade-right">
+                                <p class="section-kicker">Main request form</p>
+                                <h2 id="request-form-title">Share your gutter request details.</h2>
+                
+                                <p>
+                                    This form helps organize your request before provider matching. Eavora does not perform
+                                    gutter work directly and does not guarantee provider availability, pricing, scheduling,
+                                    warranties, or service terms.
+                                </p>
+                
+                                <div class="contact-main__info">
+                                    <div>
+                                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                                        <span>Independent platform</span>
+                                    </div>
+                
+                                    <div>
+                                        <i data-lucide="user-check" aria-hidden="true"></i>
+                                        <span>Homeowner chooses next step</span>
+                                    </div>
+                
+                                    <div>
+                                        <i data-lucide="file-check-2" aria-hidden="true"></i>
+                                        <span>Provider terms apply</span>
+                                    </div>
+                                </div>
+                
+                                <div class="page-note">
+                                    Submitting this form does not create a service agreement. Participating providers may
+                                    contact you where available.
+                                </div>
+                            </div>
+                
+                            <div class="form-card contact-form-card" data-aos="fade-left">
+                                <form class="contact-form" action="contact.php" method="POST" novalidate data-contact-form>
+                                    <div class="form-grid">
+                                        <div class="form-field">
+                                            <label class="form-label" for="fullName">Full name *</label>
+                                            <input class="form-input" type="text" id="fullName" name="fullName" autocomplete="name"
+                                                required>
+                                            <span class="form-error">Please enter your full name.</span>
+                                        </div>
+                
+                                        <div class="form-field">
+                                            <label class="form-label" for="email">Email *</label>
+                                            <input class="form-input" type="email" id="email" name="email" autocomplete="email"
+                                                required>
+                                            <span class="form-error">Please enter a valid email address.</span>
+                                        </div>
+                
+                                        <div class="form-field">
+                                            <label class="form-label" for="phone">Phone</label>
+                                            <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel">
+                                            <span class="form-error">Please enter a valid phone number.</span>
+                                        </div>
+                
+                                        <div class="form-field">
+                                            <label class="form-label" for="service">Service category *</label>
+                                            <select class="form-select" id="service" name="service" required data-service-select>
+                                                <option value="">Select a service category</option>
+                                            </select>
+                                            <span class="form-error">Please choose a service category.</span>
+                                        </div>
+                
+                                        <div class="form-field is-full">
+                                            <label class="form-label" for="message">Message</label>
+                                            <textarea class="form-textarea" id="message" name="message" rows="5"
+                                                placeholder="Describe what you noticed, your preferred timing, and any category details."></textarea>
+                                            <span class="form-error">Please add a short message.</span>
+                                        </div>
+                
+                                        <label class="checkbox-field">
+                                            <input type="checkbox" name="privacyConsent" value="yes" required>
+                                            <span class="checkbox-field__box" aria-hidden="true"></span>
+                                            <span>
+                                                I agree that my submitted request details may be used to help connect me with
+                                                participating local providers. Provider availability, pricing, scheduling,
+                                                warranties, and service terms may vary.
+                                            </span>
+                                        </label>
+                
+                                        <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off"
+                                            aria-hidden="true">
+                
+                                        <input type="hidden" name="sourcePage" value="Contact Eavora">
+                                        <input type="hidden" name="formStartedAt" value="">
+                
+                                        <p class="form-disclaimer">
+                                            Eavora is a free independent provider-matching platform. Eavora does not perform
+                                            gutter work directly and does not warrant or guarantee provider work.
+                                        </p>
+                
+                                        <div class="form-message" data-form-message role="status" aria-live="polite"></div>
+                
+                                        <button class="btn btn-primary form-submit" type="submit" data-icon="send">
+                                            <span>Submit Request</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
         <!-- SECTION 3: CONTACT OPTIONS STRIP -->
         <section class="section section-light contact-options" aria-labelledby="contact-options-title">
             <div class="container-wide">
@@ -146,115 +254,6 @@
                         <strong>24/7 request form</strong>
                         <p>Submit project details when it is convenient for you.</p>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: MAIN REQUEST FORM -->
-        <section class="section section-white contact-main" id="request-form" aria-labelledby="request-form-title">
-            <div class="container-wide">
-                <div class="contact-main__layout">
-                    <div class="contact-main__content" data-aos="fade-right">
-                        <p class="section-kicker">Main request form</p>
-                        <h2 id="request-form-title">Share your gutter request details.</h2>
-
-                        <p>
-                            This form helps organize your request before provider matching. Eavora does not perform
-                            gutter work directly and does not guarantee provider availability, pricing, scheduling,
-                            warranties, or service terms.
-                        </p>
-
-                        <div class="contact-main__info">
-                            <div>
-                                <i data-lucide="shield-check" aria-hidden="true"></i>
-                                <span>Independent platform</span>
-                            </div>
-
-                            <div>
-                                <i data-lucide="user-check" aria-hidden="true"></i>
-                                <span>Homeowner chooses next step</span>
-                            </div>
-
-                            <div>
-                                <i data-lucide="file-check-2" aria-hidden="true"></i>
-                                <span>Provider terms apply</span>
-                            </div>
-                        </div>
-
-                        <div class="page-note">
-                            Submitting this form does not create a service agreement. Participating providers may
-                            contact you where available.
-                        </div>
-                    </div>
-
-                    <div class="form-card contact-form-card" data-aos="fade-left">
-                        <form class="contact-form" action="contact.php" method="POST" novalidate data-contact-form>
-                            <div class="form-grid">
-                                <div class="form-field">
-                                    <label class="form-label" for="fullName">Full name *</label>
-                                    <input class="form-input" type="text" id="fullName" name="fullName"
-                                        autocomplete="name" required>
-                                    <span class="form-error">Please enter your full name.</span>
-                                </div>
-
-                                <div class="form-field">
-                                    <label class="form-label" for="email">Email *</label>
-                                    <input class="form-input" type="email" id="email" name="email" autocomplete="email"
-                                        required>
-                                    <span class="form-error">Please enter a valid email address.</span>
-                                </div>
-
-                                <div class="form-field">
-                                    <label class="form-label" for="phone">Phone</label>
-                                    <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel">
-                                    <span class="form-error">Please enter a valid phone number.</span>
-                                </div>
-
-                                <div class="form-field">
-                                    <label class="form-label" for="service">Service category *</label>
-                                    <select class="form-select" id="service" name="service" required
-                                        data-service-select>
-                                        <option value="">Select a service category</option>
-                                    </select>
-                                    <span class="form-error">Please choose a service category.</span>
-                                </div>
-
-                                <div class="form-field is-full">
-                                    <label class="form-label" for="message">Message</label>
-                                    <textarea class="form-textarea" id="message" name="message" rows="5"
-                                        placeholder="Describe what you noticed, your preferred timing, and any category details."></textarea>
-                                    <span class="form-error">Please add a short message.</span>
-                                </div>
-
-                                <label class="checkbox-field">
-                                    <input type="checkbox" name="privacyConsent" value="yes" required>
-                                    <span class="checkbox-field__box" aria-hidden="true"></span>
-                                    <span>
-                                        I agree that my submitted request details may be used to help connect me with
-                                        participating local providers. Provider availability, pricing, scheduling,
-                                        warranties, and service terms may vary.
-                                    </span>
-                                </label>
-
-                                <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off"
-                                    aria-hidden="true">
-
-                                <input type="hidden" name="sourcePage" value="Contact Eavora">
-                                <input type="hidden" name="formStartedAt" value="">
-
-                                <p class="form-disclaimer">
-                                    Eavora is a free independent provider-matching platform. Eavora does not perform
-                                    gutter work directly and does not warrant or guarantee provider work.
-                                </p>
-
-                                <div class="form-message" data-form-message role="status" aria-live="polite"></div>
-
-                                <button class="btn btn-primary form-submit" type="submit" data-icon="send">
-                                    <span>Submit Request</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </section>
