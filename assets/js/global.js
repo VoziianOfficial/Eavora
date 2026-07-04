@@ -102,6 +102,172 @@
         });
     };
 
+    const syncSiteConfigEverywhere = () => {
+        const replacementPairs = [
+            // Brand / company
+            ['Eavora Provider Matching Platform', getValue('company.legalName')],
+            ['Eavora', getValue('brand.name')],
+            ['Independent Gutter Matching Platform', getValue('brand.tagline')],
+            ['independent gutter matching platform logo', `${getValue('brand.name')} ${getValue('brand.tagline')} logo`],
+
+            // Contact
+            ['support@eavora.com', getValue('contact.email')],
+            ['(800) 555-0194', getValue('contact.phoneDisplay')],
+            ['+18005550194', getValue('contact.phoneRaw')],
+            ['Call Eavora', getValue('contact.phoneButtonLabel')],
+            ['Email Eavora', getValue('contact.emailLabel')],
+
+            // Company details
+            ['Company information available upon request', getValue('company.companyId')],
+            ['Service area: United States', getValue('company.address')],
+            ['Selected local areas across the United States', getValue('company.serviceArea')],
+
+            // Legal / footer
+            ['© 2026 Eavora. All rights reserved.', getValue('footer.copyright')]
+        ].filter(([, to]) => to !== undefined && to !== null && String(to).trim() !== '');
+
+        const replaceText = (value) => {
+            if (!value || typeof value !== 'string') return value;
+
+            let nextValue = value;
+
+            replacementPairs.forEach(([from, to]) => {
+                if (!from || from === to) return;
+
+                nextValue = nextValue.split(from).join(String(to));
+            });
+
+            return nextValue;
+        };
+
+        const skipTags = new Set([
+            'SCRIPT',
+            'STYLE',
+            'NOSCRIPT',
+            'IFRAME',
+            'CANVAS'
+        ]);
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || skipTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            const nextText = replaceText(node.nodeValue);
+
+            if (nextText !== node.nodeValue) {
+                node.nodeValue = nextText;
+            }
+        });
+
+        const attributesToSync = [
+            'href',
+            'src',
+            'alt',
+            'title',
+            'aria-label',
+            'placeholder',
+            'value',
+            'content'
+        ];
+
+        qsa('*').forEach((element) => {
+            if (skipTags.has(element.tagName)) return;
+
+            attributesToSync.forEach((attr) => {
+                if (!element.hasAttribute(attr)) return;
+
+                const currentValue = element.getAttribute(attr);
+                const nextValue = replaceText(currentValue);
+
+                if (nextValue !== currentValue) {
+                    element.setAttribute(attr, nextValue);
+                }
+            });
+        });
+
+        
+        if (document.title) {
+            document.title = replaceText(document.title);
+        }
+
+
+        qsa('meta[content]').forEach((meta) => {
+            const currentValue = meta.getAttribute('content');
+            const nextValue = replaceText(currentValue);
+
+            if (nextValue !== currentValue) {
+                meta.setAttribute('content', nextValue);
+            }
+        });
+
+        qsa('img[src*="logo"], .site-logo img, .site-footer__logo img, .mobile-menu__logo img').forEach((img) => {
+            const logo = getValue('brand.logo');
+            const logoAlt = getValue('brand.logoAlt');
+
+            if (logo) {
+                img.setAttribute('src', logo);
+            }
+
+            if (logoAlt) {
+                img.setAttribute('alt', logoAlt);
+            }
+        });
+
+   
+        qsa('a[href^="tel:"], [data-phone-link]').forEach((link) => {
+            const phoneRaw = getValue('contact.phoneRaw');
+
+            if (phoneRaw) {
+                link.setAttribute('href', `tel:${phoneRaw}`);
+            }
+        });
+
+       
+        qsa('a[href^="mailto:"], [data-email-link]').forEach((link) => {
+            const email = getValue('contact.email');
+
+            if (email) {
+                link.setAttribute('href', `mailto:${email}`);
+            }
+        });
+
+      
+        qsa('[data-address-link]').forEach((link) => {
+            const address = getValue('company.address');
+
+            if (!address) return;
+
+            const encodedAddress = encodeURIComponent(address);
+
+            link.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`);
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    };
+
     const getNavLinks = () => {
         return CONFIG.nav || [
             { label: 'Home', url: 'index.html' },
@@ -926,18 +1092,26 @@
         populateServiceSelects();
         injectHiddenFormSource();
 
+        setHeroImages();
+        setActiveServicePageData();
+
+        syncSiteConfigEverywhere();
+
         setupMobileMenu();
         setupDropdowns();
         setupFaqAccordions();
+
+        syncSiteConfigEverywhere();
         createFaqSchema();
+
         setupCounters();
         setupScrollToLinks();
-        setHeroImages();
-        setActiveServicePageData();
         setupCookieBanner();
         setupButtonsIconsFallback();
         setupCurrentYear();
         setupLegalDate();
+
+        syncSiteConfigEverywhere();
 
         setupLucide();
         setupAos();
@@ -963,6 +1137,7 @@
         setupFaqAccordions,
         createFaqSchema,
         setupCounters,
+        syncSiteConfigEverywhere,
         refreshIcons: setupLucide,
         refreshAos: () => {
             if (window.AOS && typeof window.AOS.refreshHard === 'function') {
