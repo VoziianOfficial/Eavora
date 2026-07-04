@@ -264,7 +264,7 @@
             {
                 title: 'Gutter Repair',
                 text: 'Overflow can be connected to poor flow, joint issues, slope problems, or blocked sections. A repair-related request may be a useful starting point.',
-                image: 'assets/images/service-3.jpg',
+                image: 'assets/images/card-2.jpg',
                 alt: 'Gutter repair category detail',
                 url: 'gutter-repair.html'
             },

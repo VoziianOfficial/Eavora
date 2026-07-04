@@ -109,7 +109,7 @@
                 count: '01',
                 title: 'New gutter systems',
                 text: 'Homeowners can start a request for new gutter system options and review provider-supplied information before continuing.',
-                image: 'assets/images/service-1.jpg',
+                image: 'assets/images/card-5.jpg',
                 alt: 'New gutter system on a residential home',
                 url: 'gutter-installation.html'
             },
@@ -200,12 +200,12 @@
         const controlItems = [
             {
                 text: 'Eavora helps homeowners compare available provider-supplied information. You can ask questions, review terms, and decide whether to continue.',
-                image: 'assets/images/hero-services.jpg',
+                image: 'assets/images/card-4.jpg',
                 alt: 'Home exterior with gutter and roofline'
             },
             {
                 text: 'Before continuing with a provider, you can ask about scope, timing, quote details, materials, cleanup, warranties, and credentials where required.',
-                image: 'assets/images/service-3.jpg',
+                image: 'assets/images/card-1.jpg',
                 alt: 'Gutter detail for repair-related provider questions'
             },
             {
