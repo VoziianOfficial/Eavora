@@ -1282,6 +1282,10 @@
 
 @media (max-width: 640px) {
 
+    .home-faq::before {
+        top: 78px;
+    }
+
     .home-need__photo,
     .home-need__photo img,
     .home-clarity__visual .photo-frame,
