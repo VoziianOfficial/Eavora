@@ -2,9 +2,7 @@
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Legal Hero
-========================= */
+
 
 .legal-hero {
     position: relative;
@@ -167,9 +165,7 @@
     color: var(--color-light-text);
 }
 
-/* =========================
-   Legal Layout
-========================= */
+
 
 .legal-content-section {
     overflow: visible;
@@ -280,9 +276,7 @@
     line-height: 1.58;
 }
 
-/* =========================
-   Legal Document
-========================= */
+
 
 .legal-document {
     padding: 42px;
@@ -390,9 +384,7 @@
     height: 18px;
 }
 
-/* =========================
-   Legal Contact Links
-========================= */
+
 
 .legal-contact-grid {
     display: grid;
@@ -436,9 +428,7 @@
     color: var(--color-orange);
 }
 
-/* =========================
-   Cookie Cards
-========================= */
+
 
 .legal-cookie-grid {
     display: grid;
@@ -526,9 +516,7 @@
     color: var(--color-light-text);
 }
 
-/* =========================
-   Legal Disclaimer
-========================= */
+
 
 .legal-disclaimer-section {
     overflow: hidden;
@@ -585,17 +573,13 @@
     line-height: 1.75;
 }
 
-/* =========================
-   Legal CTA
-========================= */
+
 
 .legal-cta {
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
 

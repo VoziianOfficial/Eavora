@@ -285,9 +285,7 @@ p {
     transform: translateY(0);
 }
 
-/* =========================
-   Buttons
-========================= */
+
 
 .btn,
 button.btn {
@@ -461,9 +459,7 @@ button.btn {
     height: 20px;
 }
 
-/* =========================
-   Header
-========================= */
+
 
 .site-header {
     position: fixed;
@@ -771,9 +767,7 @@ button.btn {
     height: 22px;
 }
 
-/* =========================
-   Mobile menu
-========================= */
+
 
 .mobile-menu {
     position: fixed;
@@ -946,9 +940,7 @@ button.btn {
     line-height: 1.55;
 }
 
-/* =========================
-   Shared Hero
-========================= */
+
 
 .hero {
     position: relative;
@@ -1039,9 +1031,7 @@ button.btn {
     background: var(--color-green);
 }
 
-/* =========================
-   Dark intro strips
-========================= */
+
 
 .dark-intro {
     position: relative;
@@ -1175,9 +1165,7 @@ button.btn {
     line-height: 1.3;
 }
 
-/* =========================
-   Shared cards/components
-========================= */
+
 
 .premium-card {
     position: relative;
@@ -1287,9 +1275,7 @@ button.btn {
     line-height: 1.6;
 }
 
-/* =========================
-   FAQ
-========================= */
+
 
 .faq-section {
     background: var(--color-premium-white);
@@ -1424,9 +1410,7 @@ button.btn {
     color: var(--color-muted);
 }
 
-/* =========================
-   Pre-footer CTA
-========================= */
+
 
 .pre-footer-cta {
     padding: 72px 0;
@@ -1523,9 +1507,7 @@ button.btn {
     justify-items: stretch;
 }
 
-/* =========================
-   Forms
-========================= */
+
 
 .form-card {
     padding: 30px;
@@ -1702,9 +1684,7 @@ button.btn {
     line-height: 1.55;
 }
 
-/* =========================
-   Footer
-========================= */
+
 
 .site-footer {
     color: var(--color-white);
@@ -1847,9 +1827,7 @@ button.btn {
     color: var(--color-orange);
 }
 
-/* =========================
-   Cookie banner
-========================= */
+
 
 .cookie-banner {
     position: fixed;
@@ -1901,9 +1879,7 @@ button.btn {
     padding: 11px 15px;
 }
 
-/* =========================
-   Utility classes
-========================= */
+
 
 .visually-hidden {
     position: absolute !important;
@@ -1945,9 +1921,7 @@ button.btn {
     }
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
     :root {

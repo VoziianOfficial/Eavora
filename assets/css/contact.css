@@ -2,17 +2,13 @@
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Contact Hero
-========================= */
+
 
 .contact-hero .hero__content {
     max-width: 820px;
 }
 
-/* =========================
-   Section 3: Contact Options
-========================= */
+
 
 .contact-options {
     overflow: hidden;
@@ -146,9 +142,7 @@
     color: var(--color-light-text);
 }
 
-/* =========================
-   Section 4: Main Request Form
-========================= */
+
 
 .contact-main {
     overflow: hidden;
@@ -253,9 +247,7 @@
     background: rgba(31, 127, 50, 0.07);
 }
 
-/* =========================
-   Section 5: After Submit
-========================= */
+
 
 .contact-after {
     overflow: hidden;
@@ -379,9 +371,7 @@
     font-size: 14px;
 }
 
-/* =========================
-   Section 6: Category Helper + FAQ
-========================= */
+
 
 .contact-helper {
     overflow: hidden;
@@ -542,17 +532,13 @@
     background: var(--color-orange);
 }
 
-/* =========================
-   Section 7: CTA
-========================= */
+
 
 .contact-cta {
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Validation Helpers
-========================= */
+
 
 .contact-form.is-submitting {
     pointer-events: none;
@@ -570,9 +556,7 @@
     content: '...';
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
 
@@ -706,9 +690,7 @@
     }
 }
 
-/* =========================
-   Request Clarity Split
-========================= */
+
 
 .contact-clarity-split {
     overflow: hidden;
@@ -859,9 +841,7 @@
     }
 }
 
-/* =========================
-   Request Snapshot Counters
-========================= */
+
 
 .contact-request-stats {
     position: relative;

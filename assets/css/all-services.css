@@ -23,9 +23,7 @@
     }
 }
 
-/* =========================
-   Shared Services Heading
-========================= */
+
 
 .services-heading {
     display: grid;
@@ -44,9 +42,7 @@
     margin-bottom: 0;
 }
 
-/* =========================
-   Section 3: Service Directory
-========================= */
+
 
 .services-directory {
     overflow: hidden;
@@ -223,9 +219,7 @@
     transform: scaleX(1);
 }
 
-/* =========================
-   Section 4: Find Right Category
-========================= */
+
 
 .services-finder {
     overflow: hidden;
@@ -419,9 +413,7 @@
     margin-bottom: 0;
 }
 
-/* =========================
-   Section 5: Circles
-========================= */
+
 
 .services-circles {
     overflow: hidden;
@@ -520,9 +512,7 @@
     transform: rotate(-5deg) scale(1.06);
 }
 
-/* =========================
-   Section 6: Scope Comparison
-========================= */
+
 
 .services-scope {
     overflow: hidden;
@@ -678,9 +668,7 @@
     transform: translateY(-3px);
 }
 
-/* =========================
-   Section 7: Steps
-========================= */
+
 
 .services-steps {
     overflow: hidden;
@@ -780,9 +768,7 @@
     transform: rotate(-5deg) scale(1.06);
 }
 
-/* =========================
-   Section 8: Before Provider
-========================= */
+
 
 .services-before {
     overflow: hidden;
@@ -911,9 +897,7 @@
     background: var(--color-orange);
 }
 
-/* =========================
-   Section 9: Availability
-========================= */
+
 
 .services-availability {
     overflow: hidden;
@@ -1004,9 +988,7 @@
     color: var(--color-light-text);
 }
 
-/* =========================
-   Section 10: Final FAQ + CTA
-========================= */
+
 
 .services-final {
     position: relative;
@@ -1039,9 +1021,7 @@
     margin-top: 64px;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
     .services-directory__grid {
@@ -1270,9 +1250,7 @@
 }
 
 
-/* =========================
-   Provider Review Belt
-========================= */
+
 
 .home-review-belt {
     position: relative;
@@ -1443,9 +1421,7 @@
     }
 }
 
-/* =========================
-   Provider Decision Lens
-========================= */
+
 
 .services-decision-lens {
     position: relative;

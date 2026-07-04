@@ -2,9 +2,7 @@
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Service Hero
-========================= */
+
 
 .service-hero .hero__content {
     max-width: 820px;
@@ -14,9 +12,7 @@
     max-width: 720px;
 }
 
-/* =========================
-   Section 2: Service Dark Intro Strip
-========================= */
+
 
 .service-intro {
     overflow: hidden;
@@ -122,9 +118,7 @@
     color: var(--color-orange);
 }
 
-/* =========================
-   Section 3: Dual Photo + Overview
-========================= */
+
 
 .service-overview {
     overflow: hidden;
@@ -250,9 +244,7 @@
     font-weight: 750;
 }
 
-/* =========================
-   Section 4: Service Reason Cards
-========================= */
+
 
 .service-reasons {
     overflow: hidden;
@@ -380,9 +372,7 @@
     color: var(--color-light-text);
 }
 
-/* =========================
-   Section 5: Split Decision / Contact
-========================= */
+
 
 .service-decision {
     overflow: hidden;
@@ -497,9 +487,7 @@
     height: 18px;
 }
 
-/* =========================
-   Section 6: Three-Card Interactive Insight
-========================= */
+
 
 .service-insight {
     overflow: hidden;
@@ -690,9 +678,7 @@
     height: 18px;
 }
 
-/* =========================
-   Section 7: Final Photo CTA + FAQ + CTA
-========================= */
+
 
 .service-final {
     overflow: hidden;
@@ -770,9 +756,7 @@
     background: transparent;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
 

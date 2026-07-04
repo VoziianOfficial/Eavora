@@ -2,9 +2,7 @@
     background: var(--color-premium-white);
 }
 
-/* =========================
-   Home Hero
-========================= */
+
 
 .home-hero .hero__content {
     max-width: 820px;
@@ -35,9 +33,7 @@
     }
 }
 
-/* =========================
-   Section Headings
-========================= */
+
 
 .home-section-heading {
     display: grid;
@@ -56,9 +52,7 @@
     margin-bottom: 0;
 }
 
-/* =========================
-   Quick Gutter Need Navigation
-========================= */
+
 
 .home-need {
     overflow: hidden;
@@ -246,9 +240,7 @@
     margin-top: 24px;
 }
 
-/* =========================
-   Platform Clarity Strip
-========================= */
+
 
 .home-clarity {
     overflow: hidden;
@@ -346,9 +338,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   About Eavora / Platform Intro
-========================= */
+
 
 .home-model {
     overflow: hidden;
@@ -484,9 +474,7 @@
     font-size: 14px;
 }
 
-/* =========================
-   Popular Gutter Services
-========================= */
+
 
 .home-services {
     overflow: hidden;
@@ -632,9 +620,7 @@
     transform: scaleX(1);
 }
 
-/* =========================
-   Problem Finder
-========================= */
+
 
 .home-finder {
     overflow: hidden;
@@ -773,9 +759,7 @@
     margin-bottom: 24px;
 }
 
-/* =========================
-   Process Route
-========================= */
+
 
 .home-process {
     overflow: hidden;
@@ -895,9 +879,7 @@
     font-size: 14px;
 }
 
-/* =========================
-   Compare + Seasonal
-========================= */
+
 
 .home-compare {
     overflow: hidden;
@@ -1111,9 +1093,7 @@
     width: fit-content;
 }
 
-/* =========================
-   FAQ Variation
-========================= */
+
 
 .home-faq {
     position: relative;
@@ -1131,9 +1111,7 @@
     background: var(--color-green);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
 
@@ -1399,9 +1377,7 @@
         min-height: 280px;
     }
 }
-/* =========================
-   Request Signal Parallax
-========================= */
+
 
 .home-signal {
     position: relative;
@@ -1563,9 +1539,7 @@
     }
 }
 
-/* =========================
-   Round Review Points
-========================= */
+
 
 .home-round-points {
     position: relative;
