@@ -49,6 +49,11 @@
         });
     };
 
+    const toRootAssetPath = (value) => {
+        if (!value) return '';
+        return value.startsWith('/') ? value : `/${String(value).replace(/^\.?\//, '')}`;
+    };
+
     const hydrateServiceData = () => {
         const service = getCurrentService();
 
@@ -71,7 +76,7 @@
 
         qsa('.service-photo-cta').forEach((element) => {
             if (service.image) {
-                element.style.setProperty('--service-final-image', `url('../${service.image}')`);
+                element.style.setProperty('--service-final-image', `url('${toRootAssetPath(service.image)}')`);
             }
         });
 
