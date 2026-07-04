@@ -249,7 +249,6 @@
 }
 
 .home-clarity__list li {
-    display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 18px;
     align-items: start;
