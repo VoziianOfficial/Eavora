@@ -393,7 +393,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.48fr);
     gap: 32px;
     align-items: stretch;
-    width: min(100%, 1180px);
+    width: min(100%, 1580px);
     min-height: 285px;
     margin: 0 auto;
     padding: 34px;
@@ -430,7 +430,7 @@
 }
 
 .home-model__panel h3 {
-    max-width: 700px;
+    max-width: 1100px;
     color: var(--color-white);
     font-size: clamp(24px, 3vw, 36px);
 }
@@ -1376,5 +1376,168 @@
     .home-finder__photo,
     .home-finder__photo img {
         min-height: 280px;
+    }
+}
+/* =========================
+   Request Signal Parallax
+========================= */
+
+.home-signal {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: var(--color-white);
+    background: var(--color-black);
+}
+
+.home-signal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+        url('../images/hero-services.jpg') center / cover no-repeat fixed;
+    transform: scale(1.04);
+}
+
+.home-signal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.24)),
+        radial-gradient(circle at 82% 24%, rgba(31, 127, 50, 0.18), transparent 34%);
+    pointer-events: none;
+}
+
+.home-signal .container-wide {
+    position: relative;
+    z-index: 2;
+}
+
+.home-signal__content {
+    max-width: 980px;
+}
+
+.home-signal__content h2 {
+    max-width: 980px;
+    margin-bottom: 22px;
+    color: var(--color-white);
+    font-size: clamp(34px, 6vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.home-signal__content p {
+    max-width: 720px;
+    margin-bottom: 0;
+    color: var(--color-light-text);
+    font-size: 17px;
+}
+
+.home-signal__rail {
+    position: relative;
+    margin-top: 64px;
+    overflow: hidden;
+    padding: 28px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-signal__rail::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-50%);
+}
+
+.home-signal__track {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: max-content;
+    gap: 14px;
+    animation: signalMove 26s linear infinite;
+}
+
+.home-signal__rail:hover .home-signal__track {
+    animation-play-state: paused;
+}
+
+.home-signal__track span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: var(--color-white);
+    background: rgba(5, 5, 5, 0.72);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+    font-size: 13px;
+    font-weight: 850;
+    line-height: 1;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+.home-signal__track span:nth-child(even) {
+    color: var(--color-orange);
+}
+
+.home-signal__track span:hover {
+    transform: translateY(-3px);
+    color: var(--color-white);
+    border-color: var(--color-green);
+    background: rgba(31, 127, 50, 0.72);
+}
+
+@keyframes signalMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 7px));
+    }
+}
+
+@media (max-width: 1180px) {
+    .home-signal::before {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+            url('../images/hero-services.jpg') center / cover no-repeat;
+    }
+
+    .home-signal__content h2 {
+        font-size: clamp(34px, 8vw, 68px);
+    }
+}
+
+@media (max-width: 720px) {
+    .home-signal__rail {
+        margin-top: 42px;
+        padding: 22px 0;
+    }
+
+    .home-signal__track span {
+        min-height: 42px;
+        padding: 0 15px;
+        font-size: 11px;
     }
 }
