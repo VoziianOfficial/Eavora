@@ -374,11 +374,54 @@
         }
     };
 
+    const initTwoDigitCounters = () => {
+        const counters = document.querySelectorAll('.js-count-two');
+
+        if (!counters.length) return;
+
+        const animateCounter = (counter) => {
+            const target = Number(counter.dataset.countTwo || 0);
+            const duration = 1200;
+            const startTime = performance.now();
+
+            const update = (currentTime) => {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = Math.round(target * eased);
+
+                counter.textContent = String(value).padStart(2, '0');
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = String(target).padStart(2, '0');
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.45
+        });
+
+        counters.forEach((counter) => observer.observe(counter));
+    };
+
+
     const init = () => {
         setupContactForm();
         setupCategoryHelper();
         setupAfterSubmitCards();
         setupServiceParam();
+        initTwoDigitCounters();
     };
 
     if (document.readyState === 'loading') {
