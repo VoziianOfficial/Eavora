@@ -623,9 +623,13 @@
 @media (max-width: 720px) {
 
     .contact-options__grid,
-    .contact-after__grid,
-    .contact-helper__categories {
+    .contact-after__grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-helper__categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .contact-option-card,
@@ -634,15 +638,14 @@
     }
 
     .contact-helper__category {
-        min-height: 112px;
-        grid-template-columns: auto minmax(0, 1fr);
-        justify-items: start;
-        text-align: left;
+        min-height: 96px;
+        gap: 10px;
+        padding: 14px;
     }
 
     .contact-helper__category svg {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
     }
 
     .contact-form .form-submit,
@@ -698,7 +701,8 @@
     }
 
     .contact-helper__category {
-        padding: 16px;
+        min-height: 90px;
+        padding: 12px;
     }
 }
 

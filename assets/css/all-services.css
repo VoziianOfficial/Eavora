@@ -2,6 +2,27 @@
     background: var(--color-premium-white);
 }
 
+@media (max-width: 640px) {
+    .services-intro-strip .container-wide {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .services-intro-strip .dark-intro__grid {
+        grid-template-columns: repeat(4, minmax(168px, 1fr));
+        min-width: max-content;
+    }
+
+    .services-intro-strip .dark-intro__item {
+        border-right: 1px solid var(--color-dark-border);
+        border-bottom: 0;
+    }
+
+    .services-intro-strip .dark-intro__item:last-child {
+        border-right: 0;
+    }
+}
+
 /* =========================
    Shared Services Heading
 ========================= */
@@ -1184,23 +1205,16 @@
     }
 
     .services-scope__photos,
-    .services-scope__headings,
-    .services-scope__icon-strip {
+    .services-scope__headings {
         grid-template-columns: 1fr;
+    }
+
+    .services-scope__icon-strip {
+        display: none;
     }
 
     .services-scope__photo {
         min-height: 280px;
-    }
-
-    .services-scope__icon-strip svg {
-        height: 82px;
-        border-right: 0;
-        border-bottom: 1px solid var(--color-dark-border);
-    }
-
-    .services-scope__icon-strip svg:last-child {
-        border-bottom: 0;
     }
 
     .services-before__card {
@@ -1418,8 +1432,7 @@
     }
 
     .home-review-belt__pill svg {
-        grid-column: 1 / -1;
-        justify-self: start;
+        display: none;
     }
 }
 

@@ -294,6 +294,8 @@
 
 .about-model__card h3 {
     max-width: 350px;
+    margin-top: 18px;
+    margin-bottom: 12px;
     color: var(--color-white);
 }
 

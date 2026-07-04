@@ -14,6 +14,27 @@
     max-width: 720px;
 }
 
+@media (max-width: 640px) {
+    .home-intro-strip .container-wide {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .home-intro-strip .dark-intro__grid {
+        grid-template-columns: repeat(4, minmax(168px, 1fr));
+        min-width: max-content;
+    }
+
+    .home-intro-strip .dark-intro__item {
+        border-right: 1px solid var(--color-dark-border);
+        border-bottom: 0;
+    }
+
+    .home-intro-strip .dark-intro__item:last-child {
+        border-right: 0;
+    }
+}
+
 /* =========================
    Section Headings
 ========================= */
