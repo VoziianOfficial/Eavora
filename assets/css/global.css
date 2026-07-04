@@ -690,7 +690,6 @@ button.btn {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 14px;
     padding: 13px 14px;
     overflow: hidden;
