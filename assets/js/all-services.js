@@ -294,11 +294,50 @@
         });
     };
 
+    const initDecisionLens = () => {
+        const section = document.querySelector('.services-decision-lens');
+
+        if (!section) return;
+
+        const imageWrap = section.querySelector('.services-decision-lens__image');
+        const image = section.querySelector('[data-decision-lens-image]');
+        const items = section.querySelectorAll('.services-decision-lens__item');
+
+        if (!image || !items.length) return;
+
+        const setActive = (item) => {
+            const nextImage = item.dataset.lensImage;
+
+            items.forEach((button) => button.classList.remove('is-active'));
+            item.classList.add('is-active');
+
+            if (!nextImage || image.getAttribute('src') === nextImage) return;
+
+            imageWrap?.classList.add('is-changing');
+
+            setTimeout(() => {
+                image.src = nextImage;
+
+                setTimeout(() => {
+                    imageWrap?.classList.remove('is-changing');
+                }, 120);
+            }, 160);
+        };
+
+        items.forEach((item) => {
+            item.addEventListener('mouseenter', () => setActive(item));
+            item.addEventListener('focus', () => setActive(item));
+            item.addEventListener('click', () => setActive(item));
+        });
+    };
+
+
     const init = () => {
         setupCategoryFinder();
         setupScopeComparison();
         setupBeforeProviderSlider();
         setupDirectoryHoverFocus();
+        initDecisionLens();
     };
 
     if (document.readyState === 'loading') {
