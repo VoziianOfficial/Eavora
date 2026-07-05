@@ -1081,6 +1081,56 @@
         });
     };
 
+    function initHomeMatchFlow() {
+        const sections = document.querySelectorAll('.home-match-flow');
+
+        sections.forEach((section) => {
+            const panel = section.querySelector('[data-flow-panel]');
+            const label = section.querySelector('[data-flow-label]');
+            const number = section.querySelector('[data-flow-number]');
+            const title = section.querySelector('[data-flow-title]');
+            const text = section.querySelector('[data-flow-text]');
+            const tags = section.querySelector('[data-flow-tags]');
+            const steps = section.querySelectorAll('.home-match-flow__step');
+
+            if (!panel || !label || !number || !title || !text || !tags || !steps.length) return;
+
+            const updatePanel = (step) => {
+                steps.forEach((item) => {
+                    const isCurrent = item === step;
+                    item.classList.toggle('is-active', isCurrent);
+                    item.setAttribute('aria-pressed', String(isCurrent));
+                });
+
+                panel.classList.add('is-changing');
+
+                window.setTimeout(() => {
+                    label.textContent = step.dataset.flowLabelValue || '';
+                    number.textContent = step.dataset.flowNumberValue || '';
+                    title.textContent = step.dataset.flowTitleValue || '';
+                    text.textContent = step.dataset.flowTextValue || '';
+
+                    const tagList = (step.dataset.flowTagsValue || '')
+                        .split('|')
+                        .map((tag) => tag.trim())
+                        .filter(Boolean);
+
+                    tags.innerHTML = tagList.map((tag) => `<span>${tag}</span>`).join('');
+
+                    panel.classList.remove('is-changing');
+                }, 160);
+            };
+
+            steps.forEach((step) => {
+                step.addEventListener('click', () => updatePanel(step));
+            });
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initHomeMatchFlow();
+    });
+
     const hydrate = () => {
         renderHeader();
         renderMobileMenu();

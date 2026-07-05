@@ -452,50 +452,93 @@
         </section>
 
         
-        <section class="section section-dark home-process" aria-labelledby="home-process-title">
-            <div class="container-wide">
-                <div class="home-process__heading" data-aos="fade-up">
+    <section class="section section-light home-match-flow" aria-labelledby="home-match-flow-title">
+        <div class="container-wide">
+            <div class="home-match-flow__head" data-aos="fade-up">
+                <div>
                     <p class="section-kicker is-orange">How matching works</p>
-                    <h2 id="home-process-title">A simple route from request to provider options.</h2>
-                    <p>
-                        Eavora keeps the process focused on provider matching. The final decision, questions, and
-                        agreement stay between you and the provider.
-                    </p>
+                    <h2 id="home-match-flow-title">A simple route from request to provider options.</h2>
                 </div>
-
-                <div class="home-process__route" aria-label="Eavora matching steps">
-                    <div class="home-process__line" aria-hidden="true"></div>
-
-                    <article class="home-process__step is-active" data-aos="fade-up">
-                        <span class="home-process__number">01</span>
+                <p>
+                    Eavora keeps the process focused on provider matching. The final decision, questions,
+                    and agreement stay between you and the provider.
+                </p>
+            </div>
+    
+            <div class="home-match-flow__layout" aria-label="Eavora matching steps">
+                <aside class="home-match-flow__intro" data-aos="fade-right" data-flow-panel aria-live="polite">
+                    <span class="home-match-flow__label" data-flow-label>Step 01 · Category</span>
+                    <strong class="home-match-flow__big" data-flow-number>01</strong>
+    
+                    <h3 data-flow-title>Choose the request category first.</h3>
+                    <p data-flow-text>
+                        Start by selecting the closest gutter-related request path, so the platform can keep
+                        the next step focused and easier to understand.
+                    </p>
+    
+                    <div class="home-match-flow__tags" data-flow-tags>
+                        <span>Installation</span>
+                        <span>Replacement</span>
+                        <span>Repair</span>
+                    </div>
+                </aside>
+    
+                <div class="home-match-flow__steps">
+                    <button class="home-match-flow__step is-active" type="button" aria-pressed="true" data-aos="fade-up"
+                        data-flow-number-value="01" data-flow-label-value="Step 01 · Category"
+                        data-flow-title-value="Choose the request category first."
+                        data-flow-text-value="Start by selecting the closest gutter-related request path, so the platform can keep the next step focused and easier to understand."
+                        data-flow-tags-value="Installation|Replacement|Repair">
+                        <span class="home-match-flow__number">01</span>
                         <i data-lucide="layout-list" aria-hidden="true"></i>
-                        <h3>Choose a category</h3>
-                        <p>Select installation, replacement, repair, cleaning, guards, or drainage.</p>
-                    </article>
-
-                    <article class="home-process__step" data-aos="fade-up" data-aos-delay="80">
-                        <span class="home-process__number">02</span>
+                        <span class="home-match-flow__copy">
+                            <strong>Choose a category</strong>
+                            <small>Select installation, replacement, repair, cleaning, guards, or drainage.</small>
+                        </span>
+                    </button>
+    
+                    <button class="home-match-flow__step" type="button" aria-pressed="false" data-aos="fade-up"
+                        data-aos-delay="80" data-flow-number-value="02" data-flow-label-value="Step 02 · Details"
+                        data-flow-title-value="Add the details that help route the request."
+                        data-flow-text-value="Share simple project context, such as the type of gutter issue, timing, and property notes, so the request feels more complete."
+                        data-flow-tags-value="Project context|Home details|Timing">
+                        <span class="home-match-flow__number">02</span>
                         <i data-lucide="file-text" aria-hidden="true"></i>
-                        <h3>Submit details</h3>
-                        <p>Share basic project context so the request can be routed more clearly.</p>
-                    </article>
-
-                    <article class="home-process__step" data-aos="fade-up" data-aos-delay="160">
-                        <span class="home-process__number">03</span>
+                        <span class="home-match-flow__copy">
+                            <strong>Submit details</strong>
+                            <small>Share basic project context so the request can be routed more clearly.</small>
+                        </span>
+                    </button>
+    
+                    <button class="home-match-flow__step" type="button" aria-pressed="false" data-aos="fade-up"
+                        data-aos-delay="160" data-flow-number-value="03" data-flow-label-value="Step 03 · Options"
+                        data-flow-title-value="Review provider-supplied information."
+                        data-flow-text-value="Participating providers may contact you with their own information, questions, availability, or next-step details."
+                        data-flow-tags-value="Provider info|Questions|Availability">
+                        <span class="home-match-flow__number">03</span>
                         <i data-lucide="messages-square" aria-hidden="true"></i>
-                        <h3>Review options</h3>
-                        <p>Participating providers may contact you with provider-supplied information.</p>
-                    </article>
-
-                    <article class="home-process__step" data-aos="fade-up" data-aos-delay="240">
-                        <span class="home-process__number">04</span>
+                        <span class="home-match-flow__copy">
+                            <strong>Review options</strong>
+                            <small>Participating providers may contact you with provider-supplied information.</small>
+                        </span>
+                    </button>
+    
+                    <button class="home-match-flow__step" type="button" aria-pressed="false" data-aos="fade-up"
+                        data-aos-delay="240" data-flow-number-value="04" data-flow-label-value="Step 04 · Decision"
+                        data-flow-title-value="Continue only if the provider feels like a fit."
+                        data-flow-text-value="You stay in control. The platform does not make the final agreement for you — you decide whether to continue directly with a provider."
+                        data-flow-tags-value="Your choice|Direct contact|No obligation">
+                        <span class="home-match-flow__number">04</span>
                         <i data-lucide="check-circle-2" aria-hidden="true"></i>
-                        <h3>Continue if it fits</h3>
-                        <p>You choose whether to continue directly with a provider.</p>
-                    </article>
+                        <span class="home-match-flow__copy">
+                            <strong>Continue if it fits</strong>
+                            <small>You choose whether to continue directly with a provider.</small>
+                        </span>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         
         <section class="section section-warm home-compare" aria-labelledby="home-compare-title">
