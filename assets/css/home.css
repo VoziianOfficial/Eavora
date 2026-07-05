@@ -2330,3 +2330,17 @@
     font-size: 11px;
     font-weight: 750;
 }
+
+
+.home-seasonal__panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 360px;
+    padding: 34px;
+    border: 1px solid var(--color-border);
+    border-radius: 34px;
+    color: var(--color-text);
+    background: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
