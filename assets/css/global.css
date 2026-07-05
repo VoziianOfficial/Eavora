@@ -2256,3 +2256,27 @@ button.btn {
         padding: 20px;
     }
 }
+
+.home-seasonal__panel a.btn.btn-orange[data-season-link] {
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 24px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    line-height: 1 !important;
+}
+
+.home-seasonal__panel a.btn.btn-orange[data-season-link] span {
+    display: block !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(2px);
+}
+
+.home-seasonal__panel a.btn.btn-orange[data-season-link] svg {
+    transform: translateY(1px);
+}
