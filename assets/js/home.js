@@ -187,21 +187,18 @@
 
         const data = [
             {
-                count: '01',
                 title: 'Submit structured gutter request details.',
                 text: 'Choose the gutter-related category, share what is happening around the property, and send a clear request through Eavora.',
                 note: 'The more clearly your request is described, the easier it is for participating providers to understand the category and context.',
                 icon: 'clipboard-list'
             },
             {
-                count: '02',
                 title: 'Participating providers may respond where available.',
                 text: 'Eavora helps route the request as a matching platform. Provider availability, response timing, and category coverage may vary by area.',
                 note: 'Eavora does not assign its own crew, perform inspections, provide estimates, or guarantee provider participation.',
                 icon: 'network'
             },
             {
-                count: '03',
                 title: 'Compare provider-supplied options before continuing.',
                 text: 'Review the details providers share, ask questions about scope and terms, and decide whether moving forward makes sense for you.',
                 note: 'Final pricing, scheduling, warranties, insurance, licensing, and service terms are provided by the provider, not by Eavora.',
@@ -216,7 +213,6 @@
             panel.classList.add('is-changing');
 
             window.setTimeout(() => {
-                setText('[data-home-model-count]', item.count);
                 setText('[data-home-model-title]', item.title);
                 setText('[data-home-model-text]', item.text);
                 setText('[data-home-model-note]', item.note);
